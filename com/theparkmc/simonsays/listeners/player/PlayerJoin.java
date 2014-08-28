@@ -8,11 +8,23 @@ public class PlayerJoin extends SSListener {
     super(pl);
   }
   
+  //GUI Kit Selection + 16 per server and 4 min
+  
   @EventHandler
   public void onPlayerJoin(PlayerJoinEvent event) {
     Player player = event.getPlayer();
     
-    //Add More Code When given more information
+    event.setJoinMessage(ChatColor.AQUA + player.getName() + ChatColor.GREEN + "has joined " + ChatColor.DARK_GREEN + "Simon Says! " + ChatColor.RED + "( " + ChatColor.LIGHT_PURPLE + Bukkit.getOnlinePlayers() + "/16 " + ChatColor.RED + ")");
+    
+    Game.setCanStart(Bukkit.getOnlinePlayer().length >= 4);
+    
+    ItemStack kit = new ItemStack(Material.EMERALD);
+    ItemMeta kitmeta = kit.getItemMeta();
+    kitmeta.setDisplayName(ChatColor.GREEN + "Kit Selector " + ChatColor.GRAY + "(Right-Click)");
+    kit.setItemMeta(kitmeta);
+    
+    player.getInventory().addItem(kit);
+    player.updateInventory();
   }
   
 }
