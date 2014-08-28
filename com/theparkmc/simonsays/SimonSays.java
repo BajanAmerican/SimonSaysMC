@@ -28,6 +28,7 @@ public class SimonSays extends JavaPlugin {
     pm.registerEvents(new PlayerDeath(this), this);
     pm.registerEvents(new PlayerQuit(this), this);
     pm.registerEvents(new AsyncPlayerPreLogin(this), this);
+    pm.registerEvents(new PlayerBreak(this), this);
   }
   
   public void startCountdown() {
