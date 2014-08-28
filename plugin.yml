@@ -1,0 +1,5 @@
+name: SimonSays
+main: com.parkmc.simonsays.SimonSays
+version: 1.0
+authors: [CrazymanJR, FrostTheDev]
+description: SimonSays Gamemode
