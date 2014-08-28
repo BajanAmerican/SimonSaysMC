@@ -12,6 +12,7 @@ public class PlayerJoin extends SSListener {
   
   @EventHandler
   public void onPlayerJoin(PlayerJoinEvent event) {
+    ArrayList<String> kitlore = new ArrayList<String>();
     Player player = event.getPlayer();
     
     event.setJoinMessage(ChatColor.AQUA + player.getName() + ChatColor.GREEN + "has joined " + ChatColor.DARK_GREEN + "Simon Says! " + ChatColor.RED + "( " + ChatColor.LIGHT_PURPLE + Bukkit.getOnlinePlayers() + "/16 " + ChatColor.RED + ")");
@@ -21,10 +22,12 @@ public class PlayerJoin extends SSListener {
     ItemStack kit = new ItemStack(Material.EMERALD);
     ItemMeta kitmeta = kit.getItemMeta();
     kitmeta.setDisplayName(ChatColor.GREEN + "Kit Selector " + ChatColor.GRAY + "(Right-Click)");
+    kitlore.add(ChatColor.GRAY + "Right-click to select a kit!");
+    kitmeta.getLore(kitlore);
     kit.setItemMeta(kitmeta);
     
-    player.getInventory().addItem(kit);
-    player.updateInventory();
+    player.getInventory().setItem(4. kit);
+    
   }
   
 }
