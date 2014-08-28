@@ -1,6 +1,7 @@
 package com.theparkmc.simonsays.listeners.entity;
 
 import org.bukkit.entity.Player;
+import org.bukkit.entity.Monster;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 
@@ -19,8 +20,8 @@ public class EntityDamage extends SSListener {
 			e.setCancelled(true);
     }
     
-    if((e.getEntity() instanceof Player) && e.getDamager() instanceof Player){
-			e.setCancelled(true);
+    if((e.getEntity() instanceof Player) && e.getDamager() instanceof Monster){
+			e.setCancelled(false);
     }
   }
   
