@@ -15,7 +15,7 @@ public class PlayerJoin extends SSListener {
     ArrayList<String> kitlore = new ArrayList<String>();
     Player player = event.getPlayer();
     
-    event.setJoinMessage(ChatColor.AQUA + player.getName() + ChatColor.GREEN + "has joined " + ChatColor.DARK_GREEN + "Simon Says! " + ChatColor.RED + "( " + ChatColor.LIGHT_PURPLE + Bukkit.getOnlinePlayers() + "/16 " + ChatColor.RED + ")");
+    event.setJoinMessage(ChatColor.AQUA + player.getName() + ChatColor.GREEN + "has joined " + ChatColor.DARK_GREEN + "Simon Says! " + ChatColor.RED + "( " + ChatColor.LIGHT_PURPLE + Bukkit.getOnlinePlayers()++; + "/16 " + ChatColor.RED + ")");
     
     Game.setCanStart(Bukkit.getOnlinePlayer().length >= 4);
     
