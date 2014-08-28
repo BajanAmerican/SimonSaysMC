@@ -23,10 +23,10 @@ public class PlayerJoin extends SSListener {
     ItemMeta kitmeta = kit.getItemMeta();
     kitmeta.setDisplayName(ChatColor.GREEN + "Kit Selector " + ChatColor.GRAY + "(Right-Click)");
     kitlore.add(ChatColor.GRAY + "Right-click to select a kit!");
-    kitmeta.getLore(kitlore);
+    kitmeta.setLore(kitlore);
     kit.setItemMeta(kitmeta);
     
-    player.getInventory().setItem(4. kit);
+    player.getInventory().setItem(4, kit);
     
   }
   
