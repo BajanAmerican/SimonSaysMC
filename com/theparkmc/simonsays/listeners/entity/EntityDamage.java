@@ -18,6 +18,10 @@ public class EntityDamage extends SSListener {
     if((!(e.getEntity() instanceof Player) && e.getDamager() instanceof Player)){
 			e.setCancelled(true);
     }
+    
+    if((e.getEntity() instanceof Player) && e.getDamager() instanceof Player){
+			e.setCancelled(true);
+    }
   }
   
 }
