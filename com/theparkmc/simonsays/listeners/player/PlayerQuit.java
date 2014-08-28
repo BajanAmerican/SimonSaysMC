@@ -21,7 +21,7 @@ public class PlayerQuit extends SSListener {
       Player player = event.getPlayer();
       
       if (Game.hasStarted()) {
-        event.setLeaveMessage(ChatColor.AQUA + player.getName() + ChatColor.GREEN + " has left " + ChatColor.DARK_GREEN + "Simon Says!");
+        ChatUtilities.Broadcast(ChatColor.AQUA + player.getName() + ChatColor.GREEN + " has left " + ChatColor.DARK_GREEN + "Simon Says!");
       }
     }
   }
