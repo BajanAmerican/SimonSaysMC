@@ -8,9 +8,7 @@ public class PlayerManager {
 	private Player player;
 	
 	//Player statistics
-	private int kills = 0;				//Total player kills
 	private int deaths = 0;				//Total player deaths
-	private int respawns = 0;			//Total player respawns
 	private int score = 0;				//Total player score
 	
 	//Player conditions
@@ -33,23 +31,11 @@ public class PlayerManager {
 	public String getName() {
 		return player.getName();
 	}
-	public int getKills() {
-		return kills;
-	}
-	public void addKill() {
-		kills++;
-	}
 	public int getDeaths() {
 		return deaths;
 	}
 	public void addDeath() {
 		deaths++;
-	}
-	public int getRespawns() {
-		return respawns;
-	}
-	public void addRespawns() {
-		respawns++;
 	}
 	public int getScore() {
 		return score;
@@ -60,9 +46,7 @@ public class PlayerManager {
 	
 	//Statistics Reset
 	public void resetStats() {
-		kills = 0;
 		deaths = 0;
-		respawns = 0;
 		score = 0;
 		setPlaying(false);
 		setAlive(false);
