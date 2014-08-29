@@ -53,4 +53,14 @@ public class SimonSays extends JavaPlugin {
     getLogger().info("SimonSays Has Been Disabled!");
   }
   
+  public static int getMinPlayers() {
+		return minPlayers;
+	}
+	public static int getMaxPlayers() {
+		return maxPlayers;
+	}
+
+}
+
+  
 }
