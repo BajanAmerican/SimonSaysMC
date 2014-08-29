@@ -6,7 +6,7 @@ public abstract class MiniGame {
 
 	//Load objects
 	ChatManager chatManager = new ChatManager();
-	InfoManager infoManager = new InfoManager();
+
 
 	//Variables that Make a MiniGame
 	private String[] kits = null;
