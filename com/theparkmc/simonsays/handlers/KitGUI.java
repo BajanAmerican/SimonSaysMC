@@ -51,7 +51,7 @@ public class KitGUI extends JavaPlugin implements Listener{
 		starterlore.add(ChatColor.GRAY + "Spawn with wood tools");
 		startermeta.setLore(starterlore);
 		starter.setItemMeta(startermeta);
-		kitgui.setItem(9, starter);
+		kitgui.setItem(2, starter);
 		
 		ItemStack miner = new ItemStack(Material.IRON_PICKAXE);
 		ItemMeta minermeta = miner.getItemMeta();
@@ -60,7 +60,7 @@ public class KitGUI extends JavaPlugin implements Listener{
 		minerlore.add(ChatColor.RED + "Master+ Kit");
 		minermeta.setLore(minerlore);
 		miner.setItemMeta(minermeta);
-		kitgui.setItem(11, miner);
+		kitgui.setItem(3, miner);
 		
 		ItemStack teleport = new ItemStack(Material.ENDER_PEARL);
 		ItemMeta teleportmeta = teleport.getItemMeta();
@@ -71,7 +71,7 @@ public class KitGUI extends JavaPlugin implements Listener{
 		teleportlore.add(ChatColor.RED + "Legend+ Kit");
 		teleportmeta.setLore(teleportlore);
 		teleport.setItemMeta(teleportmeta);
-		kitgui.setItem(13, teleport);
+		kitgui.setItem(4, teleport);
 		
 		
 		ItemStack potion = new ItemStack(Material.POTION);
@@ -81,7 +81,7 @@ public class KitGUI extends JavaPlugin implements Listener{
 		potionlore.add(ChatColor.RED + "God+ Kit");
 		potionmeta.setLore(potionlore);
 		potion.setItemMeta(potionmeta);
-		kitgui.setItem(15, potion);
+		kitgui.setItem(5, potion);
 		
 		ItemStack skip = new ItemStack(Material.BOOK);
 		ItemMeta skipmeta = skip.getItemMeta();
@@ -90,7 +90,7 @@ public class KitGUI extends JavaPlugin implements Listener{
 		skiplore.add(ChatColor.RED + " God+ Kit");
 		skipmeta.setLore(skiplore);
 		skip.setItemMeta(skipmeta);
-		kitgui.setItem(17, skip);
+		kitgui.setItem(6, skip);
 		
 		player.openInventory(kitgui);
 	}
