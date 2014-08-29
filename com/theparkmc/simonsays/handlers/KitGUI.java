@@ -44,6 +44,7 @@ public class KitGUI extends JavaPlugin implements Listener{
 		ArrayList<String> teleportlore = new ArrayList<String>();
 		ArrayList<String> potionlore = new ArrayList<String>();
 		ArrayList<String> skiplore = new ArrayList<String>();
+		ArrayList<String> storelore = new ArrayList<String>();
 		
 		ItemStack starter = new ItemStack(Material.WOOD_AXE);
 		ItemMeta startermeta = starter.getItemMeta();
@@ -91,6 +92,14 @@ public class KitGUI extends JavaPlugin implements Listener{
 		skipmeta.setLore(skiplore);
 		skip.setItemMeta(skipmeta);
 		kitgui.setItem(6, skip);
+		
+		ItemStack store = new ItemStack(Material.PAPER);
+		ItemMeta storemeta = store.getItemMeta();
+		storemeta.setDisplayName(ChatColor.ITALICS + "Store");
+		storelore.add(ChatColor.GRAY + "Visit our store!");
+		storeleta.setLore(storelore);
+		store.setItemMeta(storemeta);
+		kitgui.setItem(13, store);
 		
 		player.openInventory(kitgui);
 	}
