@@ -12,6 +12,10 @@ public class SimonSays extends JavaPlugin {
   
   public static int startCountdownId;
   
+  private static boolean debugMessages = true;
+	private static int minPlayers = 4;
+	private static int maxPlayers = 16;
+  
   public void onEnable() {
     GameState.setState(GameState.IN_LOBBY);
     
