@@ -28,7 +28,10 @@ public class Game {
     
     LocationUtilities.teleportToGame(player);
     
-    //Add Kit Stuff Here
+    if (Game.hasStarted()) {
+      //Add Kits Here
+      
+    }
     
     
     }
