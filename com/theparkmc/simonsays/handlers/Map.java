@@ -8,5 +8,10 @@ public class Map {
   // TODO: Add teleporting to the arena once done loading
   // TODO: Add Debugging messages for players with certain permissions
   
+  public void loadMap() {
+    return gameworld;
+    
+  }
+  
   
 }
