@@ -1,21 +1,38 @@
 package com.theparkmc.simonsays.handlers;
 
-import com.theparkmc.simonsays.utils.GameState;
-import com.theparkmc.simonsays.handlers.Map;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 
-public class Game {  
+public class Game {
   
-  private String fileName;
+  private static boolean canStart = false;
+  private static boolean hasStarted = false;
   
+  private static String[] teams = new String[] { "Players", "Spectators" };
   
-  if(GameState.getState(GameState.IN_LOBBY)){
-    WorldCreator worldCreator = new WorldCreator("simonworld");
-   
+  public static boolean canStart() {
+    return canStart;
   }
   
-  public World getWorld() {
-		return Bukkit.getWorld("simonworld");
-	}
-	
-	
+  public static boolean hasStarted() {
+    return hasStarted;
+  }
+  
+  public static void setCanStart(boolean b) {
+    canStart = b;
+  }
+  
+  public static void start() {
+    hasStarted = true;
+    new Team(teams);
+    
+    LocationUtilities.teleportToGame(player);
+    
+    //Add Kit Stuff Here
+    
+    
+    }
+  }
+  
+  
 }
