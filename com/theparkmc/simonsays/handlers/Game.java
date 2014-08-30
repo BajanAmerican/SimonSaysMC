@@ -58,6 +58,45 @@ public class Game {
 	chestmeta.setLore(chestlore);
 	chest.setItemMeta(chestmeta);
 	player.getInventory().setItem(8, chest);
+	
+	Scoreboard board = Bukkit.getScoreboardManager().getNewScoreboard();
+	Objective obj = board.registerNewObjective("test", "dummy");
+	Team time = board.regusterNewTeam("time");
+	Team time1 = board.regusterNewTeam("time1");
+	Team players = board.regusterNewTeam("players");
+	Team players1 = board.regusterNewTeam("players1");
+	Team round = board.regusterNewTeam("round");
+	Team round1 = board.regusterNewTeam("round1");
+	Team item = board.regusterNewTeam("item");
+	Team item1 = board.regusterNewTeam("item1");
+	obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+	obj.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Simon-Says:");
+	
+	Score time = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Time Left:"));
+	time.setScore("7");
+	
+	Score time1 = obj.getScore(Bukkit.getOfflinePlayer(/*Add How Much time is left in the round*/);
+	time1.setScore("6");
+	
+	Score players = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Players Left:"));
+	players.setScore("5");
+	
+	Score players1 = obj.getScore(Bukkit.getOfflinePlayer(/*Add How many players are left*/));
+	players1.setScore("4");
+	
+	Score round = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Round:"));
+	round.setScore("3");
+	
+	Score round1 = obj.getScore(Bukkit.getOfflinePlayer(/*Add What round it currently is at*/));
+	round1.setScore("2");
+	
+	Score item = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "Item(s):"));
+	item.setScore("1");
+	
+	Score item1 = obj.getScore(Bukit.getOfflinePlayer(/*Add What item they have to get this round*/));
+	item1.setScore("0");
+	
+	player.setScoreboard(board);
 	}
   }
   
