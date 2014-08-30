@@ -9,12 +9,12 @@ public class Game {
   
   
   if(GameState.getState(GameState.IN_LOBBY)){
-    Map.loadMap();
+    WorldCreator worldCreator = new WorldCreator("simonworld");
    
   }
   
   public World getWorld() {
-		return Bukkit.getWorld(fileName);
+		return Bukkit.getWorld("simonworld");
 	}
 	
 	
