@@ -48,6 +48,16 @@ public class Game {
 	players.teleport(teleportloc); 
 	players.setPlayerTime(6000, false); 
 	players.playSound(teleportloc, Sound.LEVEL_UP, 1, 10); 
+	
+	
+	ArrayList<String> chestlore = new ArrayList<String>();
+	ItemStack chest = new ItemStack(Material.CHEST);
+	ItemMeta chestmeta = chest.getItemMeta();
+	chestmeta.setDisplayName(ChatColor.GREEN + "Simon's Backpack");
+	chestlore.add(ChatColor.GRAY + "Right-click to open simon's backpack");
+	chestmeta.setLore(chestlore);
+	chest.setItemMeta(chestmeta);
+	player.getInventory().setItem(8, chest);
 	}
   }
   
